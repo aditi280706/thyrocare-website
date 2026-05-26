@@ -9,11 +9,11 @@ export default function Home() {
     { name: "Aarogyam C Pro", file: "/brochures/aarogyam-c-pro.pdf" },
     { name: "Aarogyam D Pro", file: "/brochures/aarogyam-d-pro.pdf" },
     { name: "Aarogyam D Plus", file: "/brochures/aarogyam-d-plus.pdf" },
-    { name: "Aarogyam Stree Profile", file: "/brochures/aarogyam-stree.pdf" },
-    { name: "Aarogyam Purush Profile", file: "/brochures/aarogyam-purush.pdf" },
-    { name: "Thyroid Basic Profile", file: "/brochures/thyroid-basic.pdf" },
-    { name: "Vitamin D Profile", file: "/brochures/vitamin-d.pdf" },
-    { name: "Vitamin B12 Profile", file: "/brochures/vitamin-b12.pdf" },
+    { name: "Aarogyam Stree Profile", file: "/brochures/aarogyam-stree-profile.pdf" },
+    { name: "Aarogyam Purush Profile", file: "/brochures/aarogyam-purush-profile.pdf" },
+    { name: "Thyroid Basic Profile", file: "/brochures/thyroid-basic-profile.pdf" },
+    { name: "Vitamin D Profile", file: "/brochures/vitamin-d-profile.pdf" },
+    { name: "Vitamin B12 Profile", file: "/brochures/vitamin-b12-profile.pdf" },
     { name: "Lipid Profile", file: "/brochures/lipid-profile.pdf" },
     { name: "HbA1c", file: "/brochures/hba1c.pdf" }
   ];
@@ -28,7 +28,7 @@ export default function Home() {
       {/* HERO SECTION */}
       <div className="bg-gradient-to-r from-blue-700 to-blue-500 text-white p-10 text-center">
         <h1 className="text-4xl font-bold">
-          Thyrocare Diagnostic Center
+          Thyrocare Provider Services
         </h1>
 
         <p className="mt-2 text-lg">
