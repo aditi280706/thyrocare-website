@@ -120,7 +120,7 @@ export default function Home() {
       </div>
 
       {/* HERO */}
-      <div className="mx-4 mt-4 rounded-3xl bg-gradient-to-r from-blue-900 to-blue-600 text-white p-6">
+      <div className="mx-4 mt-4 rounded-3xl bg-gradient-to-r from-blue-900 to-blue-600 text-white p-5">
 
         <h1 className="text-3xl font-bold leading-tight">
           Trusted Tests.
@@ -190,7 +190,7 @@ export default function Home() {
             <img
               src={t.image}
               alt={t.name}
-              className="w-full h-40 object-cover"
+              className="w-full h-36 object-contain bg-gray-100"
             />
 
             {/* CONTENT */}
@@ -209,7 +209,7 @@ export default function Home() {
                 <a
                   href={t.file}
                   download
-                  className="flex-1 bg-blue-600 text-white py-3 rounded-2xl flex items-center justify-center gap-2 font-semibold"
+                  className="flex-1 bg-blue-600 text-white py-2.5 rounded-2xl flex items-center justify-center gap-2 font-semibold"
                 >
                   <Download size={18} />
                   Download
@@ -217,7 +217,7 @@ export default function Home() {
 
                 <Link
                   to="/enquiry"
-                  className="flex-1 border border-pink-400 text-pink-500 py-3 rounded-2xl text-center font-semibold"
+                  className="flex-1 border border-pink-400 text-pink-500 py-2.5 rounded-2xl text-center font-semibold"
                 >
                   Enquire
                 </Link>
