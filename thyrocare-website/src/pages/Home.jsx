@@ -18,48 +18,83 @@ export default function Home() {
   const [search, setSearch] = useState("");
 
   const tests = [
-    {
-      name: "Aarogyam B Pro",
-      desc: "Comprehensive wellness blood test",
-      file: "/brochures/aarogyam-b-pro.pdf",
-      icon: <TestTube2 className="text-violet-500" size={28} />,
-    },
+  {
+    name: "Aarogyam B Pro",
+    desc: "Comprehensive wellness blood test",
+    file: "/brochures/aarogyam-b-pro.pdf",
+    icon: <TestTube2 className="text-violet-500" size={28} />,
+  },
 
-    {
-      name: "Aarogyam C Pro",
-      desc: "Advanced cardiac risk assessment",
-      file: "/brochures/aarogyam-c-pro.pdf",
-      icon: <HeartPulse className="text-green-500" size={28} />,
-    },
+  {
+    name: "Aarogyam C Pro",
+    desc: "Advanced cardiac risk assessment",
+    file: "/brochures/aarogyam-c-pro.pdf",
+    icon: <HeartPulse className="text-green-500" size={28} />,
+  },
 
-    {
-      name: "Aarogyam D Pro",
-      desc: "Complete diabetes screening profile",
-      file: "/brochures/aarogyam-d-pro.pdf",
-      icon: <Shield className="text-blue-500" size={28} />,
-    },
+  {
+    name: "Aarogyam D Pro",
+    desc: "Complete diabetes screening profile",
+    file: "/brochures/aarogyam-d-pro.pdf",
+    icon: <Shield className="text-blue-500" size={28} />,
+  },
 
-    {
-      name: "Aarogyam D Plus",
-      desc: "Diabetes & heart risk profile",
-      file: "/brochures/aarogyam-d-plus.pdf",
-      icon: <Droplets className="text-orange-500" size={28} />,
-    },
+  {
+    name: "Aarogyam D Plus",
+    desc: "Diabetes & heart risk profile",
+    file: "/brochures/aarogyam-d-plus.pdf",
+    icon: <Droplets className="text-orange-500" size={28} />,
+  },
 
-    {
-      name: "Aarogyam Stree Profile",
-      desc: "Essential health check for women",
-      file: "/brochures/aarogyam-stree-profile.pdf",
-      icon: <Activity className="text-pink-500" size={28} />,
-    },
+  {
+    name: "Aarogyam Stree Profile",
+    desc: "Essential health check for women",
+    file: "/brochures/aarogyam-stree-profile.pdf",
+    icon: <Activity className="text-pink-500" size={28} />,
+  },
 
-    {
-      name: "Aarogyam Purush Profile",
-      desc: "Complete health check for men",
-      file: "/brochures/aarogyam-purush-profile.pdf",
-      icon: <UserRound className="text-purple-500" size={28} />,
-    },
-  ];
+  {
+    name: "Aarogyam Purush Profile",
+    desc: "Complete health check for men",
+    file: "/brochures/aarogyam-purush-profile.pdf",
+    icon: <UserRound className="text-purple-500" size={28} />,
+  },
+
+  {
+    name: "Thyroid Basic Profile",
+    desc: "Basic thyroid screening package",
+    file: "/brochures/thyroid-basic-profile.pdf",
+    icon: <Shield className="text-cyan-500" size={28} />,
+  },
+
+  {
+    name: "Vitamin D Profile",
+    desc: "Vitamin D deficiency screening",
+    file: "/brochures/vitamin-d-profile.pdf",
+    icon: <Droplets className="text-yellow-500" size={28} />,
+  },
+
+  {
+    name: "Vitamin B12 Profile",
+    desc: "Vitamin B12 health assessment",
+    file: "/brochures/vitamin-b12-profile.pdf",
+    icon: <Activity className="text-red-500" size={28} />,
+  },
+
+  {
+    name: "Lipid Profile",
+    desc: "Cholesterol and heart health test",
+    file: "/brochures/lipid-profile.pdf",
+    icon: <HeartPulse className="text-indigo-500" size={28} />,
+  },
+
+  {
+    name: "HbA1c",
+    desc: "Diabetes blood sugar monitoring",
+    file: "/brochures/hba1c.pdf",
+    icon: <TestTube2 className="text-emerald-500" size={28} />,
+  },
+];
 
   const filtered = tests.filter((t) =>
     t.name.toLowerCase().includes(search.toLowerCase())
