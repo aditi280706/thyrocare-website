@@ -190,7 +190,7 @@ export default function Home() {
             <img
               src={t.image}
               alt={t.name}
-              className="w-full h-36 object-contain bg-gray-100"
+              className="w-full h-36 object-contain bg-gray-100 p-2"
             />
 
             {/* CONTENT */}
