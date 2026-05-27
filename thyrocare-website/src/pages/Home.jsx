@@ -120,7 +120,7 @@ export default function Home() {
       </div>
 
       {/* HERO */}
-      <div className="mx-4 mt-4 rounded-3xl bg-gradient-to-r from-blue-900 to-blue-600 text-white p-5">
+      <div className="mx-4 mt-4 rounded-[28px] bg-gradient-to-r from-blue-900 to-blue-600 text-white p-5">
 
         <h1 className="text-3xl font-bold leading-tight">
           Trusted Tests.
@@ -162,7 +162,7 @@ export default function Home() {
       {/* SEARCH */}
       <div className="p-4">
 
-        <div className="bg-white rounded-2xl px-4 py-2.5 flex items-center shadow-sm">
+        <div className="bg-white rounded-[28px] px-4 py-2.5 flex items-center shadow-sm">
 
           <Search className="text-gray-400 mr-3" size={18} />
 
@@ -178,12 +178,12 @@ export default function Home() {
       </div>
 
       {/* BROCHURE CARDS */}
-      <div className="px-4 pb-10 grid grid-cols-1 gap-5">
+      <div className="px-4 pb-6 grid grid-cols-1 gap-5">
 
         {filtered.map((t, i) => (
           <div
             key={i}
-            className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300"
+            className="bg-white rounded-[28px] overflow-hidden shadow-sm hover:shadow-lg transition duration-300"
           >
 
             {/* IMAGE */}
@@ -228,6 +228,51 @@ export default function Home() {
 
           </div>
         ))}
+
+      </div>
+
+      {/* LOCATION SECTION */}
+      <div className="px-4 pb-10">
+
+        <div className="bg-white rounded-[28px] p-5 shadow-sm">
+
+          <h2 className="text-xl font-bold text-gray-800">
+            Visit Our Center
+          </h2>
+
+          <p className="text-sm text-gray-500 mt-2 leading-6">
+            1A, OM GAJANAN CHS,
+            <br />
+            JN ROAD,
+            <br />
+            MULUND WEST
+          </p>
+
+          <div className="mt-4 overflow-hidden rounded-2xl">
+
+            <iframe
+              title="location"
+              src="https://www.google.com/maps?q=1A,OM+GAJANAN+CHS,JN+ROAD,MULUND+WEST&output=embed"
+              width="100%"
+              height="220"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              className="rounded-2xl"
+            ></iframe>
+
+          </div>
+
+          <a
+            href="https://maps.app.goo.gl/4PYd2wNAyNdhBGzd8"
+            target="_blank"
+            rel="noreferrer"
+            className="mt-4 inline-block w-full bg-blue-600 text-white text-center py-3 rounded-2xl font-semibold"
+          >
+            Open in Google Maps
+          </a>
+
+        </div>
 
       </div>
 
