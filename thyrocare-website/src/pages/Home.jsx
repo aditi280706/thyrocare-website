@@ -6,12 +6,6 @@ import {
   MessageCircle,
   Search,
   Download,
-  HeartPulse,
-  Shield,
-  Droplets,
-  Activity,
-  TestTube2,
-  UserRound,
 } from "lucide-react";
 
 export default function Home() {
@@ -20,79 +14,68 @@ export default function Home() {
   const tests = [
     {
       name: "Aarogyam B Pro",
-      desc: "Comprehensive wellness blood test",
+      image: "/images/b-pro.jpg",
       file: "/brochures/aarogyam-b-pro.pdf",
-      icon: <TestTube2 className="text-violet-500" size={24} />,
     },
 
     {
       name: "Aarogyam C Pro",
-      desc: "Advanced cardiac risk assessment",
+      image: "/images/c-pro.jpg",
       file: "/brochures/aarogyam-c-pro.pdf",
-      icon: <HeartPulse className="text-green-500" size={24} />,
     },
 
     {
       name: "Aarogyam D Pro",
-      desc: "Complete diabetes screening profile",
+      image: "/images/d-pro.jpg",
       file: "/brochures/aarogyam-d-pro.pdf",
-      icon: <Shield className="text-blue-500" size={24} />,
     },
 
     {
       name: "Aarogyam D Plus",
-      desc: "Diabetes & heart risk profile",
+      image: "/images/d-plus.jpg",
       file: "/brochures/aarogyam-d-plus.pdf",
-      icon: <Droplets className="text-orange-500" size={24} />,
     },
 
     {
       name: "Aarogyam Stree Profile",
-      desc: "Essential health check for women",
+      image: "/images/stree.jpg",
       file: "/brochures/aarogyam-stree-profile.pdf",
-      icon: <Activity className="text-pink-500" size={24} />,
     },
 
     {
       name: "Aarogyam Purush Profile",
-      desc: "Complete health check for men",
+      image: "/images/purush.jpg",
       file: "/brochures/aarogyam-purush-profile.pdf",
-      icon: <UserRound className="text-purple-500" size={24} />,
     },
 
     {
       name: "Thyroid Basic Profile",
-      desc: "Basic thyroid screening package",
+      image: "/images/thyroid.jpg",
       file: "/brochures/thyroid-basic-profile.pdf",
-      icon: <Shield className="text-cyan-500" size={24} />,
     },
 
     {
       name: "Vitamin D Profile",
-      desc: "Vitamin D deficiency screening",
+      image: "/images/vitamin-d.jpg",
       file: "/brochures/vitamin-d-profile.pdf",
-      icon: <Droplets className="text-yellow-500" size={24} />,
     },
 
     {
       name: "Vitamin B12 Profile",
-      desc: "Vitamin B12 health assessment",
+      image: "/images/vitamin-b12.jpg",
       file: "/brochures/vitamin-b12-profile.pdf",
-      icon: <Activity className="text-red-500" size={24} />,
     },
 
     {
       name: "Lipid Profile",
-      desc: "Cholesterol and heart health test",
+      image: "/images/lipid.jpg",
       file: "/brochures/lipid-profile.pdf",
-      icon: <HeartPulse className="text-indigo-500" size={24} />,
     },
 
     {
       name: "HbA1c",
-      desc: "Diabetes blood sugar monitoring",
+      image: "/images/hba1c.jpg",
       file: "/brochures/hba1c.pdf",
-      icon: <TestTube2 className="text-emerald-500" size={24} />,
     },
   ];
 
@@ -112,22 +95,22 @@ export default function Home() {
           </h1>
 
           <p className="text-xs text-gray-500">
-            Tests you can trust
+            Trusted Diagnostic Services
           </p>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex gap-2">
 
           <a
             href="tel:+919819013891"
-            className="bg-blue-100 p-2.5 rounded-full"
+            className="bg-blue-100 p-3 rounded-full"
           >
             <Phone className="text-blue-700" size={18} />
           </a>
 
           <a
             href="https://wa.me/919819013891"
-            className="bg-green-100 p-2.5 rounded-full"
+            className="bg-green-100 p-3 rounded-full"
           >
             <MessageCircle className="text-green-600" size={18} />
           </a>
@@ -137,43 +120,37 @@ export default function Home() {
       </div>
 
       {/* HERO */}
-      <div className="mx-4 mt-4 rounded-3xl overflow-hidden bg-gradient-to-r from-blue-900 to-blue-600 text-white p-5">
-
-        <div className="bg-white/20 inline-block px-3 py-1 rounded-full text-xs mb-3">
-          Trusted by Millions
-        </div>
+      <div className="mx-4 mt-4 rounded-3xl bg-gradient-to-r from-blue-900 to-blue-600 text-white p-6">
 
         <h1 className="text-3xl font-bold leading-tight">
           Trusted Tests.
           <br />
-          Better <span className="text-pink-400">Health.</span>
+          Better Health.
         </h1>
 
         <p className="mt-3 text-sm text-gray-200">
-          Accurate Reports • Home Collection • Fast Results
+          Home Collection • Accurate Reports • Fast Service
         </p>
 
         <div className="mt-5 flex gap-2 flex-wrap">
 
           <a
             href="tel:+919819013891"
-            className="bg-white text-blue-700 px-4 py-2.5 rounded-xl font-semibold flex items-center gap-2 text-sm"
+            className="bg-white text-blue-700 px-4 py-3 rounded-xl font-semibold text-sm"
           >
-            <Phone size={16} />
             Call Now
           </a>
 
           <a
             href="https://wa.me/919819013891"
-            className="bg-green-500 px-4 py-2.5 rounded-xl font-semibold flex items-center gap-2 text-sm"
+            className="bg-green-500 px-4 py-3 rounded-xl font-semibold text-sm"
           >
-            <MessageCircle size={16} />
             WhatsApp
           </a>
 
           <Link
             to="/enquiry"
-            className="bg-pink-500 px-4 py-2.5 rounded-xl font-semibold text-sm"
+            className="bg-pink-500 px-4 py-3 rounded-xl font-semibold text-sm"
           >
             Enquiry
           </Link>
@@ -192,7 +169,7 @@ export default function Home() {
           <input
             type="text"
             placeholder="Search tests..."
-            className="outline-none flex-1 bg-transparent text-sm"
+            className="outline-none flex-1 bg-transparent"
             onChange={(e) => setSearch(e.target.value)}
           />
 
@@ -200,100 +177,57 @@ export default function Home() {
 
       </div>
 
-      {/* TEST LIST */}
-      <div className="px-4 pb-8 space-y-3">
+      {/* BROCHURE CARDS */}
+      <div className="px-4 pb-10 grid grid-cols-1 gap-5">
 
         {filtered.map((t, i) => (
           <div
             key={i}
-            className="bg-white rounded-2xl p-3 shadow-sm flex items-center justify-between gap-3"
+            className="bg-white rounded-3xl overflow-hidden shadow-sm"
           >
 
-            <div className="flex items-center gap-3">
+            {/* IMAGE */}
+            <img
+              src={t.image}
+              alt={t.name}
+              className="w-full h-52 object-cover"
+            />
 
-              <div className="bg-gray-100 p-3 rounded-xl">
-                {t.icon}
+            {/* CONTENT */}
+            <div className="p-5">
+
+              <h2 className="text-xl font-bold text-gray-800">
+                {t.name}
+              </h2>
+
+              <p className="text-sm text-gray-500 mt-1">
+                Download brochure and view complete package details.
+              </p>
+
+              <div className="mt-5 flex gap-3">
+
+                <a
+                  href={t.file}
+                  download
+                  className="flex-1 bg-blue-600 text-white py-3 rounded-2xl flex items-center justify-center gap-2 font-semibold"
+                >
+                  <Download size={18} />
+                  Download
+                </a>
+
+                <Link
+                  to="/enquiry"
+                  className="flex-1 border border-pink-400 text-pink-500 py-3 rounded-2xl text-center font-semibold"
+                >
+                  Enquire
+                </Link>
+
               </div>
-
-              <div>
-                <h2 className="font-bold text-base text-gray-800">
-                  {t.name}
-                </h2>
-
-                <p className="text-xs text-gray-500 max-w-[140px]">
-                  {t.desc}
-                </p>
-              </div>
-
-            </div>
-
-            <div className="flex flex-col gap-2 items-end">
-
-              <a
-                href={t.file}
-                download
-                className="border border-violet-400 text-violet-600 px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1"
-              >
-                <Download size={14} />
-                Download
-              </a>
-
-              <Link
-                to="/enquiry"
-                className="border border-pink-400 text-pink-500 px-3 py-1.5 rounded-lg text-xs font-semibold"
-              >
-                Enquire
-              </Link>
 
             </div>
 
           </div>
         ))}
-
-      </div>
-
-      {/* FEATURES */}
-      <div className="bg-white rounded-t-3xl p-5 grid grid-cols-2 gap-4 text-center">
-
-        <div>
-          <h3 className="font-semibold text-sm">
-            Accurate Reports
-          </h3>
-
-          <p className="text-xs text-gray-500 mt-1">
-            100% reliable results
-          </p>
-        </div>
-
-        <div>
-          <h3 className="font-semibold text-sm">
-            Home Collection
-          </h3>
-
-          <p className="text-xs text-gray-500 mt-1">
-            Sample collection at home
-          </p>
-        </div>
-
-        <div>
-          <h3 className="font-semibold text-sm">
-            Fast Reports
-          </h3>
-
-          <p className="text-xs text-gray-500 mt-1">
-            Reports on time
-          </p>
-        </div>
-
-        <div>
-          <h3 className="font-semibold text-sm">
-            Expert Support
-          </h3>
-
-          <p className="text-xs text-gray-500 mt-1">
-            We are here to help
-          </p>
-        </div>
 
       </div>
 
