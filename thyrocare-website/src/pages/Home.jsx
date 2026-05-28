@@ -37,8 +37,8 @@ function Home() {
     },
     {
       name: "HbA1c",
-      image: "/images/hbalc.jpg",
-      pdf: "/brochures/hbalc.pdf",
+      image: "/images/hba1c.jpg",
+      pdf: "/brochures/hba1c.pdf",
     },
     {
       name: "Lipid Profile",
