@@ -76,10 +76,10 @@ function Home() {
         <div className="flex gap-4 items-center">
 
           <img
-         src="/images/logo.jpg"
-         alt="Thyrocare"
-         className="w-28 h-28 object-contain rounded-2xl border p-2 bg-white"
-         />
+            src="/images/logo.jpg"
+            alt="Thyrocare"
+            className="w-28 h-28 object-contain rounded-2xl border p-2 bg-white"
+          />
 
           <div>
 
@@ -99,13 +99,15 @@ function Home() {
 
         {/* SAVE CONTACT */}
 
-        <button
+        <a
+          href="/dinesh-prajapati.vcf"
+          download
           className="mt-6 w-full bg-[#1f1f1f] text-white py-4 rounded-2xl flex items-center justify-center text-lg font-semibold"
         >
           📥 Add to Phone Book
-        </button>
+        </a>
 
-        {/* CONTACTS */}
+        {/* CONTACT */}
 
         <div className="mt-8 space-y-5">
 
@@ -130,7 +132,7 @@ function Home() {
               ✉️
             </div>
 
-            <div className="text-gray-700 text-[14px] break-all">
+            <div className="text-gray-700 text-[15px] break-all">
               prajapatid158@gmail.com
             </div>
           </a>
@@ -148,25 +150,6 @@ function Home() {
             <div className="text-gray-700 text-lg">
               WhatsApp Chat
             </div>
-          </a>
-
-          <a
-            href="https://share.google/31nwM6LtXCiDHpx68"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-start gap-4 border border-pink-200 rounded-[30px] px-4 py-5 bg-white"
-          >
-            <div className="w-14 h-14 rounded-full bg-[#1f1f1f] text-white flex items-center justify-center text-2xl shrink-0">
-              📍
-            </div>
-
-            <div className="text-gray-700 leading-8 text-[15px]">
-              1A, Om Gajanan CHS,<br />
-              JN Road, Near Aparna Hospital<br />
-              & Pratap Palace,<br />
-              Mulund West, Mumbai - 400080
-            </div>
-
           </a>
 
         </div>
@@ -236,7 +219,7 @@ function Home() {
 
       </div>
 
-      {/* TEST LIST */}
+      {/* TESTS */}
 
       <div className="mt-5 space-y-5">
 
@@ -246,8 +229,6 @@ function Home() {
             key={index}
             className="bg-white rounded-[28px] overflow-hidden shadow-md"
           >
-
-            {/* CLICK IMAGE */}
 
             <a
               href={item.image}
@@ -295,6 +276,32 @@ function Home() {
           </div>
 
         ))}
+
+      </div>
+
+      {/* LOCATION SECTION */}
+
+      <div className="bg-white rounded-[30px] p-6 shadow-md mt-8 mb-6">
+
+        <h2 className="text-2xl font-bold text-gray-800 mb-4">
+          📍 Visit Us
+        </h2>
+
+        <p className="text-gray-600 leading-8 text-[16px]">
+          1A, Om Gajanan CHS,<br />
+          JN Road, Near Aparna Hospital<br />
+          & Pratap Palace,<br />
+          Mulund West, Mumbai - 400080
+        </p>
+
+        <a
+          href="https://maps.app.goo.gl/31nwM6LtXCiDHpx68"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-5 inline-block w-full bg-blue-600 text-white text-center py-4 rounded-2xl font-semibold"
+        >
+          🗺 Open in Google Maps
+        </a>
 
       </div>
 
