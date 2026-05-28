@@ -1,96 +1,254 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import {
+  Phone,
+  MessageCircle,
+  Menu,
+  Search,
+  Download,
+  MessageSquare,
+  ChevronRight,
+} from "lucide-react"
 
-export default function Home() {
-  const [search, setSearch] = useState("");
+import "./Home.css"
 
-  const tests = [
-    { name: "Aarogyam B Pro", file: "/brochures/aarogyam-b-pro.pdf" },
-    { name: "Aarogyam C Pro", file: "/brochures/aarogyam-c-pro.pdf" },
-    { name: "Aarogyam D Pro", file: "/brochures/aarogyam-d-pro.pdf" },
-    { name: "Aarogyam D Plus", file: "/brochures/aarogyam-d-plus.pdf" },
-    { name: "Aarogyam Stree Profile", file: "/brochures/aarogyam-stree-profile.pdf" },
-    { name: "Aarogyam Purush Profile", file: "/brochures/aarogyam-purush-profile.pdf" },
-    { name: "Thyroid Basic Profile", file: "/brochures/thyroid-basic-profile.pdf" },
-    { name: "Vitamin D Profile", file: "/brochures/vitamin-d-profile.pdf" },
-    { name: "Vitamin B12 Profile", file: "/brochures/vitamin-b12-profile.pdf" },
-    { name: "Lipid Profile", file: "/brochures/lipid-profile.pdf" },
-    { name: "HbA1c", file: "/brochures/hba1c.pdf" },
-  ];
+const tests = [
+  {
+    name: "Aarogyam B Pro",
+    desc: "Comprehensive wellness blood test for whole family.",
+    file: "aarogyam-b-pro.pdf",
+    image: "/images/b-pro.jpg",
+    color: "#8b5cf6",
+  },
+  {
+    name: "Aarogyam C Pro",
+    desc: "Advanced cardiac risk assessment profile.",
+    file: "aarogyam-c-pro.pdf",
+    image: "/images/c-pro.jpg",
+    color: "#22c55e",
+  },
+  {
+    name: "Aarogyam D Plus",
+    desc: "Diabetes & heart risk comprehensive profile.",
+    file: "aarogyam-d-plus.pdf",
+    image: "/images/d-plus.jpg",
+    color: "#f97316",
+  },
+  {
+    name: "Aarogyam D Pro",
+    desc: "Complete diabetes screening profile.",
+    file: "aarogyam-d-pro.pdf",
+    image: "/images/d-pro.jpg",
+    color: "#3b82f6",
+  },
+  {
+    name: "HBA1C",
+    desc: "Blood sugar monitoring test.",
+    file: "hbalc.pdf",
+    image: "/images/hbalc.jpg",
+    color: "#ef4444",
+  },
+  {
+    name: "Lipid Profile",
+    desc: "Complete cholesterol analysis profile.",
+    file: "lipid-profile.pdf",
+    image: "/images/lipid.jpg",
+    color: "#06b6d4",
+  },
+  {
+    name: "Aarogyam Purush Profile",
+    desc: "Complete health check for men.",
+    file: "aarogyam-purush-profile.pdf",
+    image: "/images/purush.jpg",
+    color: "#7c3aed",
+  },
+  {
+    name: "Aarogyam Stree Profile",
+    desc: "Essential health check for women.",
+    file: "aarogyam-stree-profile.pdf",
+    image: "/images/stree.jpg",
+    color: "#ec4899",
+  },
+  {
+    name: "Thyroid Basic Profile",
+    desc: "Basic thyroid hormone testing.",
+    file: "thyroid-basic-profile.pdf",
+    image: "/images/thyroid.jpg",
+    color: "#6366f1",
+  },
+  {
+    name: "Vitamin B12 Profile",
+    desc: "Vitamin B12 deficiency screening.",
+    file: "vitamin-b12-profile.pdf",
+    image: "/images/vitamin-b12.jpg",
+    color: "#14b8a6",
+  },
+  {
+    name: "Vitamin D Profile",
+    desc: "Vitamin D level testing profile.",
+    file: "vitamin-d-profile.pdf",
+    image: "/images/vitamin-d.jpg",
+    color: "#f59e0b",
+  },
+]
 
-  const filtered = tests.filter((t) =>
-    t.name.toLowerCase().includes(search.toLowerCase())
-  );
-
+const Home = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="mobile">
+
+      {/* HEADER */}
+      <header className="header">
+
+        <div className="logo">
+          <h1>
+            <span className="blue">Thyro</span>
+            <span className="red">care</span>
+          </h1>
+
+          <p>Tests you can trust</p>
+        </div>
+
+        <div className="top-icons">
+
+          <a href="tel:+919999999999" className="circle">
+            <Phone size={20} />
+          </a>
+
+          <a
+            href="https://wa.me/919999999999"
+            target="_blank"
+            rel="noreferrer"
+            className="circle green"
+          >
+            <MessageCircle size={20} />
+          </a>
+
+          <div className="circle dark">
+            <Menu size={20} />
+          </div>
+
+        </div>
+
+      </header>
+
       {/* HERO */}
-      <div className="bg-gradient-to-r from-blue-700 to-blue-500 text-white p-10 text-center">
-        <h1 className="text-4xl font-bold">Thyrocare Provider Services</h1>
-        <p className="mt-2 text-lg">
-          Trusted Blood Tests • Home Collection • Fast Reports
+      <section className="hero">
+
+        <div className="badge">
+          Trusted by Millions
+        </div>
+
+        <h2>
+          Trusted Tests.
+          <br />
+          Better <span>Health.</span>
+        </h2>
+
+        <p>
+          Accurate Reports • Home Collection • Fast Results
         </p>
 
-        <div className="mt-5 flex justify-center gap-3 flex-wrap">
-          <a
-            href="tel:+919819013891"
-            className="bg-white text-blue-700 px-5 py-2 rounded-full font-semibold"
-          >
-            📞 Call Now
+        <div className="hero-buttons">
+
+          <a href="tel:+919999999999" className="hero-btn white">
+            <Phone size={16} />
+            Call Now
           </a>
 
           <a
-            href="https://wa.me/919819013891"
-            className="bg-green-500 px-5 py-2 rounded-full font-semibold text-white"
+            href="https://wa.me/919999999999"
+            target="_blank"
+            rel="noreferrer"
+            className="hero-btn green-btn"
           >
-            💬 WhatsApp
+            <MessageCircle size={16} />
+            WhatsApp
           </a>
 
-          <Link
-            to="/enquiry"
-            className="bg-black px-5 py-2 rounded-full text-white"
+          <a
+            href="https://wa.me/919999999999"
+            target="_blank"
+            rel="noreferrer"
+            className="hero-btn pink"
           >
-            🧾 Enquiry
-          </Link>
+            <MessageSquare size={16} />
+            Enquiry
+          </a>
+
         </div>
-      </div>
+
+      </section>
 
       {/* SEARCH */}
-      <div className="p-6 max-w-3xl mx-auto">
+      <div className="search-box">
+
+        <Search size={20} className="search-icon" />
+
         <input
           type="text"
           placeholder="Search tests (Thyroid, Vitamin, Lipid...)"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          className="w-full p-3 border rounded-xl shadow-sm"
         />
+
       </div>
 
-      {/* TEST CARDS */}
-      <div className="px-6 pb-10 grid md:grid-cols-3 gap-5 max-w-6xl mx-auto">
-        {filtered.map((t, i) => (
-          <div
-            key={i}
-            className="bg-white p-5 rounded-2xl shadow hover:shadow-lg transition"
-          >
-            <h2 className="text-lg font-semibold mb-3">{t.name}</h2>
+      {/* CARDS */}
+      <section className="tests">
 
-            <a
-              href={t.file}
-              download
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg inline-block"
-            >
-              Download Brochure
-            </a>
+        {tests.map((item, index) => (
+          <div className="card" key={index}>
+
+            <img
+              src={item.image}
+              alt={item.name}
+              className="preview-image"
+            />
+
+            <div className="card-content">
+
+              <h3>{item.name}</h3>
+
+              <p>{item.desc}</p>
+
+            </div>
+
+            <div className="actions">
+
+              <a
+                href={`/brochures/${item.file}`}
+                download
+                className="download-btn"
+                style={{
+                  borderColor: item.color,
+                  color: item.color,
+                }}
+              >
+                <Download size={15} />
+                Download
+              </a>
+
+              <a
+                href="https://wa.me/919999999999"
+                target="_blank"
+                rel="noreferrer"
+                className="enquire-btn"
+                style={{
+                  borderColor: item.color,
+                  color: item.color,
+                }}
+              >
+                <MessageSquare size={15} />
+                Enquire
+              </a>
+
+            </div>
+
+            <ChevronRight className="arrow" />
+
           </div>
         ))}
-      </div>
 
-      {/* FOOTER */}
-      <div className="bg-white border-t p-6 text-center text-gray-600">
-        <p>📍 Mulund, Mumbai | Home Sample Collection Available</p>
-        <p>© Thyrocare Diagnostic Center</p>
-      </div>
+      </section>
+
     </div>
-  );
+  )
 }
+
+export default Home
