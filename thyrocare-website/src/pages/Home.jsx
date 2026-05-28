@@ -1,39 +1,39 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function Home() {
+function Home() {
   const [search, setSearch] = useState("");
 
   const tests = [
     {
       name: "Aarogyam B Pro",
-      image: "/images/aarogyam-b-pro.jpg",
+      image: "/images/b-pro.jpg",
       pdf: "/brochures/aarogyam-b-pro.pdf",
     },
     {
       name: "Aarogyam C Pro",
-      image: "/images/aarogyam-c-pro.jpg",
+      image: "/images/c-pro.jpg",
       pdf: "/brochures/aarogyam-c-pro.pdf",
     },
     {
       name: "Aarogyam D Plus",
-      image: "/images/aarogyam-d-plus.jpg",
+      image: "/images/d-plus.jpg",
       pdf: "/brochures/aarogyam-d-plus.pdf",
     },
     {
       name: "Aarogyam D Pro",
-      image: "/images/aarogyam-d-pro.jpg",
+      image: "/images/d-pro.jpg",
       pdf: "/brochures/aarogyam-d-pro.pdf",
     },
     {
       name: "Purush Profile",
-      image: "/images/aarogyam-purush-profile.jpg",
-      pdf: "/brochures/purush.pdf",
+      image: "/images/purush.jpg",
+      pdf: "/brochures/aarogyam-purush-profile.pdf",
     },
     {
       name: "Stree Profile",
-      image: "/images/aarogyam-stree-profile.jpg",
-      pdf: "/brochures/stree.pdf",
+      image: "/images/stree.jpg",
+      pdf: "/brochures/aarogyam-stree-profile.pdf",
     },
     {
       name: "HbA1c",
@@ -42,23 +42,23 @@ export default function Home() {
     },
     {
       name: "Lipid Profile",
-      image: "/images/lipid-profile.jpg",
-      pdf: "/brochures/lipid.pdf",
+      image: "/images/lipid.jpg",
+      pdf: "/brochures/lipid-profile.pdf",
     },
     {
       name: "Thyroid Profile",
-      image: "/images/thyroid-basic-profile.jpg",
-      pdf: "/brochures/thyroid.pdf",
+      image: "/images/thyroid.jpg",
+      pdf: "/brochures/thyroid-basic-profile.pdf",
     },
     {
       name: "Vitamin B12",
-      image: "/images/vitamin-b12-profile.jpg",
-      pdf: "/brochures/vitamin-b12.pdf",
+      image: "/images/vitamin-b12.jpg",
+      pdf: "/brochures/vitamin-b12-profile.pdf",
     },
     {
       name: "Vitamin D",
-      image: "/images/vitamin-d-profile.jpg",
-      pdf: "/brochures/vitamin-d.pdf",
+      image: "/images/vitamin-d.jpg",
+      pdf: "/brochures/vitamin-d-profile.pdf",
     },
   ];
 
@@ -73,11 +73,11 @@ export default function Home() {
 
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-extrabold text-[#17398d]">
+          <h1 className="text-4xl font-extrabold text-[#17398d]">
             Thyro<span className="text-red-500">care</span>
           </h1>
 
-          <p className="text-gray-500 text-sm mt-1">
+          <p className="text-gray-500 text-sm mt-2">
             Trusted Diagnostic Services
           </p>
         </div>
@@ -101,7 +101,7 @@ export default function Home() {
 
       {/* HERO */}
 
-      <div className="mt-6 rounded-[28px] overflow-hidden bg-gradient-to-r from-[#1e1b8f] via-[#2563eb] to-[#ec4899] p-6 text-white shadow-xl">
+      <div className="mt-6 rounded-[30px] overflow-hidden bg-gradient-to-r from-[#1e1b8f] via-[#2563eb] to-[#ec4899] p-7 text-white shadow-xl">
 
         <div className="bg-white/20 inline-block px-4 py-2 rounded-full text-sm">
           Trusted by Millions
@@ -123,21 +123,21 @@ export default function Home() {
             href="tel:9819013891"
             className="bg-white text-blue-700 px-5 py-3 rounded-2xl font-bold shadow"
           >
-            Call Now
+            📞 Call Now
           </a>
 
           <a
             href="https://wa.me/919819013891"
             className="bg-[#22c55e] text-white px-5 py-3 rounded-2xl font-bold shadow"
           >
-            WhatsApp
+            💬 WhatsApp
           </a>
 
           <Link
             to="/enquiry"
             className="bg-pink-500 text-white px-5 py-3 rounded-2xl font-bold shadow"
           >
-            Enquiry
+            📝 Enquiry
           </Link>
 
         </div>
@@ -146,7 +146,7 @@ export default function Home() {
       {/* SEARCH */}
 
       <div className="bg-white rounded-2xl p-4 mt-5 shadow flex items-center gap-3">
-        <span>🔍</span>
+        <span className="text-lg">🔍</span>
 
         <input
           type="text"
@@ -167,11 +167,21 @@ export default function Home() {
             className="bg-white rounded-[28px] overflow-hidden shadow-md"
           >
 
-            <img
-              src={item.image}
-              alt={item.name}
-              className="w-full h-auto object-cover"
-            />
+            {/* CLICKABLE IMAGE */}
+
+            <a
+              href={item.image}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={item.image}
+                alt={item.name}
+                className="w-full h-auto object-cover hover:scale-[1.02] transition-all duration-300"
+              />
+            </a>
+
+            {/* CONTENT */}
 
             <div className="p-5">
 
@@ -182,6 +192,8 @@ export default function Home() {
               <p className="text-gray-500 mt-2 leading-7">
                 Download brochure and view complete package details.
               </p>
+
+              {/* BUTTONS */}
 
               <div className="flex gap-4 mt-5">
 
@@ -197,17 +209,19 @@ export default function Home() {
                   to="/enquiry"
                   className="flex-1 border border-pink-400 text-pink-500 py-3 rounded-2xl text-center font-semibold"
                 >
-                  Enquire
+                  💬 Enquire
                 </Link>
 
               </div>
+
             </div>
+
           </div>
         ))}
 
       </div>
 
-      {/* FOOTER */}
+      {/* FEATURES */}
 
       <div className="grid grid-cols-2 gap-4 mt-8 mb-10">
 
@@ -236,6 +250,9 @@ export default function Home() {
         </div>
 
       </div>
+
     </div>
   );
 }
+
+export default Home;
