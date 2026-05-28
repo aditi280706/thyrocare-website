@@ -69,34 +69,104 @@ function Home() {
   return (
     <div className="min-h-screen bg-[#f5f7fb] px-4 py-5">
 
-      {/* HEADER */}
+      {/* BUSINESS CARD */}
 
-      <div className="flex items-center justify-between">
+      <div className="bg-white rounded-[32px] p-5 shadow-lg mb-6">
 
-        <div>
-          <h1 className="text-4xl font-extrabold text-[#17398d]">
-            Thyro<span className="text-red-500">care</span>
-          </h1>
+        <div className="flex gap-4 items-center">
 
-          <p className="text-gray-500 text-sm mt-2">
-            Trusted Diagnostic Services
-          </p>
+          <img
+         src="/images/logo.jpg"
+         alt="Thyrocare"
+         className="w-28 h-28 object-contain rounded-2xl border p-2 bg-white"
+         />
+
+          <div>
+
+            <h1 className="text-3xl font-bold text-gray-800">
+              Thyrocare
+            </h1>
+
+            <div className="w-20 h-[2px] bg-pink-300 mt-2 mb-3 rounded-full"></div>
+
+            <p className="text-xl text-gray-700 font-medium">
+              Mr. Dinesh Prajapati
+            </p>
+
+          </div>
+
         </div>
 
-        <div className="flex gap-3">
+        {/* SAVE CONTACT */}
+
+        <button
+          className="mt-6 w-full bg-[#1f1f1f] text-white py-4 rounded-2xl flex items-center justify-center text-lg font-semibold"
+        >
+          📥 Add to Phone Book
+        </button>
+
+        {/* CONTACTS */}
+
+        <div className="mt-8 space-y-5">
 
           <a
             href="tel:9819013891"
-            className="w-12 h-12 bg-white rounded-full shadow flex items-center justify-center text-xl"
+            className="flex items-center gap-4 border border-pink-200 rounded-full px-4 py-4 bg-white"
           >
-            📞
+            <div className="w-14 h-14 rounded-full bg-[#1f1f1f] text-white flex items-center justify-center text-2xl">
+              📞
+            </div>
+
+            <div className="text-gray-700 text-lg">
+              9819013891 / 9867119941
+            </div>
+          </a>
+
+          <a
+            href="mailto:prajapatid158@gmail.com"
+            className="flex items-center gap-4 border border-pink-200 rounded-full px-4 py-4 bg-white"
+          >
+            <div className="w-14 h-14 rounded-full bg-[#1f1f1f] text-white flex items-center justify-center text-2xl">
+              ✉️
+            </div>
+
+            <div className="text-gray-700 text-[14px] break-all">
+              prajapatid158@gmail.com
+            </div>
           </a>
 
           <a
             href="https://wa.me/919819013891"
-            className="w-12 h-12 bg-white rounded-full shadow flex items-center justify-center text-xl"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-4 border border-pink-200 rounded-full px-4 py-4 bg-white"
           >
-            💬
+            <div className="w-14 h-14 rounded-full bg-[#1f1f1f] text-white flex items-center justify-center text-2xl">
+              💬
+            </div>
+
+            <div className="text-gray-700 text-lg">
+              WhatsApp Chat
+            </div>
+          </a>
+
+          <a
+            href="https://share.google/31nwM6LtXCiDHpx68"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-start gap-4 border border-pink-200 rounded-[30px] px-4 py-5 bg-white"
+          >
+            <div className="w-14 h-14 rounded-full bg-[#1f1f1f] text-white flex items-center justify-center text-2xl shrink-0">
+              📍
+            </div>
+
+            <div className="text-gray-700 leading-8 text-[15px]">
+              1A, Om Gajanan CHS,<br />
+              JN Road, Near Aparna Hospital<br />
+              & Pratap Palace,<br />
+              Mulund West, Mumbai - 400080
+            </div>
+
           </a>
 
         </div>
@@ -105,7 +175,7 @@ function Home() {
 
       {/* HERO */}
 
-      <div className="mt-6 rounded-[30px] overflow-hidden bg-gradient-to-r from-[#1e1b8f] via-[#2563eb] to-[#ec4899] p-7 text-white shadow-xl">
+      <div className="rounded-[30px] overflow-hidden bg-gradient-to-r from-[#1e1b8f] via-[#2563eb] to-[#ec4899] p-7 text-white shadow-xl">
 
         <div className="bg-white/20 inline-block px-4 py-2 rounded-full text-sm">
           Trusted by Millions
@@ -120,8 +190,6 @@ function Home() {
         <p className="mt-4 text-white/90 text-sm leading-7">
           Home Collection • Accurate Reports • Fast Service
         </p>
-
-        {/* BUTTONS */}
 
         <div className="flex gap-3 mt-7 flex-wrap">
 
@@ -146,13 +214,6 @@ function Home() {
             📝 Enquiry
           </Link>
 
-          <Link
-            to="/address"
-            className="bg-white/20 text-white px-5 py-3 rounded-2xl font-bold shadow"
-          >
-            📍 Address
-          </Link>
-
         </div>
 
       </div>
@@ -175,7 +236,7 @@ function Home() {
 
       </div>
 
-      {/* TEST CARDS */}
+      {/* TEST LIST */}
 
       <div className="mt-5 space-y-5">
 
@@ -186,7 +247,7 @@ function Home() {
             className="bg-white rounded-[28px] overflow-hidden shadow-md"
           >
 
-            {/* IMAGE */}
+            {/* CLICK IMAGE */}
 
             <a
               href={item.image}
@@ -196,11 +257,9 @@ function Home() {
               <img
                 src={item.image}
                 alt={item.name}
-                className="w-full h-[240px] object-cover hover:scale-[1.02] transition-all duration-300"
+                className="w-full h-auto object-cover hover:scale-[1.02] transition-all duration-300"
               />
             </a>
-
-            {/* CONTENT */}
 
             <div className="p-5">
 
@@ -211,8 +270,6 @@ function Home() {
               <p className="text-gray-500 mt-2 leading-7">
                 Download brochure and view complete package details.
               </p>
-
-              {/* ACTION BUTTONS */}
 
               <div className="flex gap-4 mt-5">
 
