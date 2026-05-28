@@ -67,29 +67,29 @@ function Home() {
   );
 
   return (
-    <div className="min-h-screen bg-[#f5f7fb] px-4 py-5">
+    <div className="min-h-screen bg-[#f5f7fb] px-3 py-4">
 
       {/* BUSINESS CARD */}
 
-      <div className="bg-white rounded-[32px] p-5 shadow-lg mb-6">
+      <div className="bg-white rounded-[28px] p-4 shadow-lg mb-5">
 
-        <div className="flex gap-4 items-center">
+        <div className="flex gap-3 items-center">
 
           <img
             src="/images/logo.jpg"
             alt="Thyrocare"
-            className="w-28 h-28 object-contain rounded-2xl border p-2 bg-white"
+            className="w-20 h-20 object-contain rounded-2xl border p-2 bg-white"
           />
 
           <div>
 
-            <h1 className="text-3xl font-bold text-gray-800">
+            <h1 className="text-2xl font-bold text-gray-800">
               Thyrocare
             </h1>
 
-            <div className="w-20 h-[2px] bg-pink-300 mt-2 mb-3 rounded-full"></div>
+            <div className="w-16 h-[2px] bg-pink-300 mt-2 mb-2 rounded-full"></div>
 
-            <p className="text-xl text-gray-700 font-medium">
+            <p className="text-sm text-gray-700 font-medium">
               Mr. Dinesh Prajapati
             </p>
 
@@ -102,37 +102,37 @@ function Home() {
         <a
           href="/dinesh-prajapati.vcf"
           download
-          className="mt-6 w-full bg-[#1f1f1f] text-white py-4 rounded-2xl flex items-center justify-center text-lg font-semibold"
+          className="mt-5 w-full bg-[#1f1f1f] text-white py-3 rounded-2xl flex items-center justify-center text-sm font-semibold"
         >
           📥 Add to Phone Book
         </a>
 
         {/* CONTACT */}
 
-        <div className="mt-8 space-y-5">
+        <div className="mt-6 space-y-4">
 
           <a
             href="tel:9819013891"
-            className="flex items-center gap-4 border border-pink-200 rounded-full px-4 py-4 bg-white"
+            className="flex items-center gap-3 border border-pink-200 rounded-full px-3 py-3 bg-white"
           >
-            <div className="w-14 h-14 rounded-full bg-[#1f1f1f] text-white flex items-center justify-center text-2xl">
+            <div className="w-11 h-11 rounded-full bg-[#1f1f1f] text-white flex items-center justify-center text-lg">
               📞
             </div>
 
-            <div className="text-gray-700 text-lg">
+            <div className="text-gray-700 text-sm">
               9819013891 / 9867119941
             </div>
           </a>
 
           <a
             href="mailto:prajapatid158@gmail.com"
-            className="flex items-center gap-4 border border-pink-200 rounded-full px-4 py-4 bg-white"
+            className="flex items-center gap-3 border border-pink-200 rounded-full px-3 py-3 bg-white"
           >
-            <div className="w-14 h-14 rounded-full bg-[#1f1f1f] text-white flex items-center justify-center text-2xl">
+            <div className="w-11 h-11 rounded-full bg-[#1f1f1f] text-white flex items-center justify-center text-lg">
               ✉️
             </div>
 
-            <div className="text-gray-700 text-[15px] break-all">
+            <div className="text-gray-700 text-xs break-all">
               prajapatid158@gmail.com
             </div>
           </a>
@@ -141,13 +141,13 @@ function Home() {
             href="https://wa.me/919819013891"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-4 border border-pink-200 rounded-full px-4 py-4 bg-white"
+            className="flex items-center gap-3 border border-pink-200 rounded-full px-3 py-3 bg-white"
           >
-            <div className="w-14 h-14 rounded-full bg-[#1f1f1f] text-white flex items-center justify-center text-2xl">
+            <div className="w-11 h-11 rounded-full bg-[#1f1f1f] text-white flex items-center justify-center text-lg">
               💬
             </div>
 
-            <div className="text-gray-700 text-lg">
+            <div className="text-gray-700 text-sm">
               WhatsApp Chat
             </div>
           </a>
@@ -158,41 +158,41 @@ function Home() {
 
       {/* HERO */}
 
-      <div className="rounded-[30px] overflow-hidden bg-gradient-to-r from-[#1e1b8f] via-[#2563eb] to-[#ec4899] p-7 text-white shadow-xl">
+      <div className="rounded-[28px] overflow-hidden bg-gradient-to-r from-[#1e1b8f] via-[#2563eb] to-[#ec4899] p-5 text-white shadow-xl">
 
-        <div className="bg-white/20 inline-block px-4 py-2 rounded-full text-sm">
+        <div className="bg-white/20 inline-block px-3 py-2 rounded-full text-xs">
           Trusted by Millions
         </div>
 
-        <h2 className="text-4xl font-extrabold leading-tight mt-5">
+        <h2 className="text-3xl font-extrabold leading-tight mt-4">
           Trusted Tests.
           <br />
           Better Health.
         </h2>
 
-        <p className="mt-4 text-white/90 text-sm leading-7">
+        <p className="mt-3 text-white/90 text-xs leading-6">
           Home Collection • Accurate Reports • Fast Service
         </p>
 
-        <div className="flex gap-3 mt-7 flex-wrap">
+        <div className="flex gap-2 mt-6 flex-wrap">
 
           <a
             href="tel:9819013891"
-            className="bg-white text-blue-700 px-5 py-3 rounded-2xl font-bold shadow"
+            className="bg-white text-blue-700 px-4 py-2 rounded-2xl text-sm font-bold shadow"
           >
-            📞 Call Now
+            📞 Call
           </a>
 
           <a
             href="https://wa.me/919819013891"
-            className="bg-[#22c55e] text-white px-5 py-3 rounded-2xl font-bold shadow"
+            className="bg-[#22c55e] text-white px-4 py-2 rounded-2xl text-sm font-bold shadow"
           >
             💬 WhatsApp
           </a>
 
           <Link
             to="/enquiry"
-            className="bg-pink-500 text-white px-5 py-3 rounded-2xl font-bold shadow"
+            className="bg-pink-500 text-white px-4 py-2 rounded-2xl text-sm font-bold shadow"
           >
             📝 Enquiry
           </Link>
@@ -203,9 +203,9 @@ function Home() {
 
       {/* SEARCH */}
 
-      <div className="bg-white rounded-2xl p-4 mt-5 shadow flex items-center gap-3">
+      <div className="bg-white rounded-2xl p-3 mt-4 shadow flex items-center gap-3">
 
-        <span className="text-lg">
+        <span className="text-sm">
           🔍
         </span>
 
@@ -214,20 +214,20 @@ function Home() {
           placeholder="Search tests..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-full outline-none bg-transparent"
+          className="w-full outline-none bg-transparent text-sm"
         />
 
       </div>
 
       {/* TESTS */}
 
-      <div className="mt-5 space-y-5">
+      <div className="mt-4 space-y-4">
 
         {filteredTests.map((item, index) => (
 
           <div
             key={index}
-            className="bg-white rounded-[28px] overflow-hidden shadow-md"
+            className="bg-white rounded-[24px] overflow-hidden shadow-md"
           >
 
             <a
@@ -238,33 +238,33 @@ function Home() {
               <img
                 src={item.image}
                 alt={item.name}
-                className="w-full h-auto object-cover hover:scale-[1.02] transition-all duration-300"
+                className="w-full h-auto object-cover"
               />
             </a>
 
-            <div className="p-5">
+            <div className="p-4">
 
-              <h3 className="text-2xl font-bold text-gray-800">
+              <h3 className="text-lg font-bold text-gray-800">
                 {item.name}
               </h3>
 
-              <p className="text-gray-500 mt-2 leading-7">
+              <p className="text-gray-500 mt-2 leading-6 text-sm">
                 Download brochure and view complete package details.
               </p>
 
-              <div className="flex gap-4 mt-5">
+              <div className="flex gap-3 mt-4">
 
                 <a
                   href={item.pdf}
                   download
-                  className="flex-1 bg-blue-600 text-white py-3 rounded-2xl text-center font-semibold"
+                  className="flex-1 bg-blue-600 text-white py-2 rounded-2xl text-center text-sm font-semibold"
                 >
                   ⬇ Download
                 </a>
 
                 <Link
                   to="/enquiry"
-                  className="flex-1 border border-pink-400 text-pink-500 py-3 rounded-2xl text-center font-semibold"
+                  className="flex-1 border border-pink-400 text-pink-500 py-2 rounded-2xl text-center text-sm font-semibold"
                 >
                   💬 Enquire
                 </Link>
@@ -279,15 +279,15 @@ function Home() {
 
       </div>
 
-      {/* LOCATION SECTION */}
+      {/* LOCATION */}
 
-      <div className="bg-white rounded-[30px] p-6 shadow-md mt-8 mb-6">
+      <div className="bg-white rounded-[28px] p-5 shadow-md mt-6 mb-5">
 
-        <h2 className="text-2xl font-bold text-gray-800 mb-4">
+        <h2 className="text-lg font-bold text-gray-800 mb-3">
           📍 Visit Us
         </h2>
 
-        <p className="text-gray-600 leading-8 text-[16px]">
+        <p className="text-gray-600 leading-7 text-sm">
           1A, Om Gajanan CHS,<br />
           JN Road, Near Aparna Hospital<br />
           & Pratap Palace,<br />
@@ -298,7 +298,7 @@ function Home() {
           href="https://maps.app.goo.gl/31nwM6LtXCiDHpx68"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-5 inline-block w-full bg-blue-600 text-white text-center py-4 rounded-2xl font-semibold"
+          className="mt-4 inline-block w-full bg-blue-600 text-white text-center py-3 rounded-2xl text-sm font-semibold"
         >
           🗺 Open in Google Maps
         </a>
@@ -307,35 +307,35 @@ function Home() {
 
       {/* FEATURES */}
 
-      <div className="grid grid-cols-2 gap-4 mt-8 mb-10">
+      <div className="grid grid-cols-2 gap-3 mt-5 mb-8">
 
-        <div className="bg-white rounded-3xl p-5 text-center shadow">
+        <div className="bg-white rounded-3xl p-4 text-center shadow">
 
-          <div className="text-3xl">
+          <div className="text-2xl">
             📄
           </div>
 
-          <h3 className="font-bold mt-3">
+          <h3 className="font-bold mt-2 text-sm">
             Accurate Reports
           </h3>
 
-          <p className="text-gray-500 text-sm mt-2">
+          <p className="text-gray-500 text-xs mt-1">
             Reliable diagnostic reports
           </p>
 
         </div>
 
-        <div className="bg-white rounded-3xl p-5 text-center shadow">
+        <div className="bg-white rounded-3xl p-4 text-center shadow">
 
-          <div className="text-3xl">
+          <div className="text-2xl">
             🏠
           </div>
 
-          <h3 className="font-bold mt-3">
+          <h3 className="font-bold mt-2 text-sm">
             Home Collection
           </h3>
 
-          <p className="text-gray-500 text-sm mt-2">
+          <p className="text-gray-500 text-xs mt-1">
             Sample collection at doorstep
           </p>
 
