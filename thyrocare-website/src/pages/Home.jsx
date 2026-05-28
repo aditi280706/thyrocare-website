@@ -168,7 +168,7 @@ function Home() {
           </a>
 
           <a
-            href="https://maps.app.goo.gl/31nwM6LtXCiDHpx68"
+            href="https://share.google/EYQyUMQ9IoZGrqsJ2"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-start gap-3 border border-pink-200 rounded-[24px] px-3 py-4 bg-white"
@@ -329,7 +329,7 @@ function Home() {
         </p>
 
         <a
-          href="https://maps.app.goo.gl/31nwM6LtXCiDHpx68"
+          href="https://share.google/EYQyUMQ9IoZGrqsJ2"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-4 inline-block w-full bg-blue-600 text-white text-center py-3 rounded-2xl text-sm font-semibold"

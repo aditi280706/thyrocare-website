@@ -44,14 +44,14 @@ export default function Address() {
 
         <div className="flex flex-col gap-4 mt-8">
 
-          <a
-            href="https://share.google/31nwM6LtXCiDHpx68"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-blue-600 text-white py-4 rounded-2xl text-center font-bold text-lg"
-          >
-            📍 Open in Google Maps
-          </a>
+         <a
+          href="https://share.google/EYQyUMQ9IoZGrqsJ2"
+          target="_blank"
+         rel="noopener noreferrer"
+         className="bg-blue-600 text-white py-4 rounded-2xl text-center font-bold text-lg"
+         >
+  📍 Open in Google Maps
+</a>
 
           <a
             href="tel:9819013891"
