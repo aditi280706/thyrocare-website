@@ -1,7 +1,6 @@
 import {
   Phone,
   MessageCircle,
-  Menu,
   Search,
   Download,
   MessageSquare,
@@ -108,12 +107,14 @@ const Home = () => {
       <header className="header">
 
         <div className="logo">
+
           <h1>
             <span className="blue">Thyro</span>
             <span className="red">care</span>
           </h1>
 
           <p>Trusted Diagnostic Services</p>
+
         </div>
 
         <div className="top-icons">
@@ -190,7 +191,7 @@ const Home = () => {
 
       </div>
 
-      {/* CARDS */}
+      {/* TEST CARDS */}
 
       <section className="tests">
 
