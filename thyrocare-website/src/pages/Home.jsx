@@ -97,14 +97,14 @@ function Home() {
 
         </div>
 
-        {/* SAVE CONTACT */}
+        {/* ADD TO PHONE BOOK */}
 
         <a
           href="/dinesh-prajapati.vcf"
           download
           className="mt-5 w-full bg-[#1f1f1f] text-white py-3 rounded-2xl flex items-center justify-center text-sm font-semibold"
         >
-          📥 Add to Phone Book
+          📥 Add Contact + Address
         </a>
 
         {/* CONTACT */}
@@ -150,6 +150,25 @@ function Home() {
             <div className="text-gray-700 text-sm">
               WhatsApp Chat
             </div>
+          </a>
+
+          <a
+            href="https://maps.app.goo.gl/31nwM6LtXCiDHpx68"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-start gap-3 border border-pink-200 rounded-[24px] px-3 py-4 bg-white"
+          >
+            <div className="w-11 h-11 rounded-full bg-[#1f1f1f] text-white flex items-center justify-center text-lg shrink-0">
+              📍
+            </div>
+
+            <div className="text-gray-700 text-xs leading-6">
+              1A, Om Gajanan CHS,<br />
+              JN Road, Near Aparna Hospital<br />
+              & Pratap Palace,<br />
+              Mulund West, Mumbai - 400080
+            </div>
+
           </a>
 
         </div>
