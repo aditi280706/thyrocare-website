@@ -5,7 +5,6 @@ import {
   Search,
   Download,
   MessageSquare,
-  ChevronRight,
 } from "lucide-react"
 
 import "./Home.css"
@@ -13,77 +12,87 @@ import "./Home.css"
 const tests = [
   {
     name: "Aarogyam B Pro",
-    desc: "Comprehensive wellness blood test for whole family.",
+    desc: "Download brochure and view complete package details.",
     file: "aarogyam-b-pro.pdf",
     image: "/images/b-pro.jpg",
-    color: "#8b5cf6",
+    color: "#2563eb",
   },
+
   {
     name: "Aarogyam C Pro",
-    desc: "Advanced cardiac risk assessment profile.",
+    desc: "Download brochure and view complete package details.",
     file: "aarogyam-c-pro.pdf",
     image: "/images/c-pro.jpg",
-    color: "#22c55e",
+    color: "#ec4899",
   },
+
+  {
+    name: "Aarogyam D Pro",
+    desc: "Download brochure and view complete package details.",
+    file: "aarogyam-d-pro.pdf",
+    image: "/images/d-pro.jpg",
+    color: "#8b5cf6",
+  },
+
   {
     name: "Aarogyam D Plus",
-    desc: "Diabetes & heart risk comprehensive profile.",
+    desc: "Download brochure and view complete package details.",
     file: "aarogyam-d-plus.pdf",
     image: "/images/d-plus.jpg",
     color: "#f97316",
   },
-  {
-    name: "Aarogyam D Pro",
-    desc: "Complete diabetes screening profile.",
-    file: "aarogyam-d-pro.pdf",
-    image: "/images/d-pro.jpg",
-    color: "#3b82f6",
-  },
+
   {
     name: "HBA1C",
-    desc: "Blood sugar monitoring test.",
+    desc: "Blood sugar monitoring package.",
     file: "hbalc.pdf",
     image: "/images/hbalc.jpg",
     color: "#ef4444",
   },
+
   {
     name: "Lipid Profile",
-    desc: "Complete cholesterol analysis profile.",
+    desc: "Complete cholesterol testing package.",
     file: "lipid-profile.pdf",
     image: "/images/lipid.jpg",
     color: "#06b6d4",
   },
+
   {
-    name: "Aarogyam Purush Profile",
-    desc: "Complete health check for men.",
+    name: "Purush Profile",
+    desc: "Complete health checkup for men.",
     file: "aarogyam-purush-profile.pdf",
     image: "/images/purush.jpg",
     color: "#7c3aed",
   },
+
   {
-    name: "Aarogyam Stree Profile",
-    desc: "Essential health check for women.",
+    name: "Stree Profile",
+    desc: "Complete health checkup for women.",
     file: "aarogyam-stree-profile.pdf",
     image: "/images/stree.jpg",
     color: "#ec4899",
   },
+
   {
-    name: "Thyroid Basic Profile",
-    desc: "Basic thyroid hormone testing.",
+    name: "Thyroid Profile",
+    desc: "Thyroid hormone testing package.",
     file: "thyroid-basic-profile.pdf",
     image: "/images/thyroid.jpg",
     color: "#6366f1",
   },
+
   {
-    name: "Vitamin B12 Profile",
-    desc: "Vitamin B12 deficiency screening.",
+    name: "Vitamin B12",
+    desc: "Vitamin B12 testing package.",
     file: "vitamin-b12-profile.pdf",
     image: "/images/vitamin-b12.jpg",
     color: "#14b8a6",
   },
+
   {
-    name: "Vitamin D Profile",
-    desc: "Vitamin D level testing profile.",
+    name: "Vitamin D",
+    desc: "Vitamin D testing package.",
     file: "vitamin-d-profile.pdf",
     image: "/images/vitamin-d.jpg",
     color: "#f59e0b",
@@ -95,6 +104,7 @@ const Home = () => {
     <div className="mobile">
 
       {/* HEADER */}
+
       <header className="header">
 
         <div className="logo">
@@ -103,13 +113,13 @@ const Home = () => {
             <span className="red">care</span>
           </h1>
 
-          <p>Tests you can trust</p>
+          <p>Trusted Diagnostic Services</p>
         </div>
 
         <div className="top-icons">
 
           <a href="tel:+919999999999" className="circle">
-            <Phone size={20} />
+            <Phone size={18} />
           </a>
 
           <a
@@ -118,38 +128,30 @@ const Home = () => {
             rel="noreferrer"
             className="circle green"
           >
-            <MessageCircle size={20} />
+            <MessageCircle size={18} />
           </a>
-
-          <div className="circle dark">
-            <Menu size={20} />
-          </div>
 
         </div>
 
       </header>
 
       {/* HERO */}
-      <section className="hero">
 
-        <div className="badge">
-          Trusted by Millions
-        </div>
+      <section className="hero">
 
         <h2>
           Trusted Tests.
           <br />
-          Better <span>Health.</span>
+          Better Health.
         </h2>
 
         <p>
-          Accurate Reports • Home Collection • Fast Results
+          Home Collection • Accurate Reports • Fast Service
         </p>
 
         <div className="hero-buttons">
 
           <a href="tel:+919999999999" className="hero-btn white">
-            <Phone size={16} />
             Call Now
           </a>
 
@@ -159,7 +161,6 @@ const Home = () => {
             rel="noreferrer"
             className="hero-btn green-btn"
           >
-            <MessageCircle size={16} />
             WhatsApp
           </a>
 
@@ -169,7 +170,6 @@ const Home = () => {
             rel="noreferrer"
             className="hero-btn pink"
           >
-            <MessageSquare size={16} />
             Enquiry
           </a>
 
@@ -178,21 +178,24 @@ const Home = () => {
       </section>
 
       {/* SEARCH */}
+
       <div className="search-box">
 
-        <Search size={20} className="search-icon" />
+        <Search size={18} className="search-icon" />
 
         <input
           type="text"
-          placeholder="Search tests (Thyroid, Vitamin, Lipid...)"
+          placeholder="Search tests..."
         />
 
       </div>
 
       {/* CARDS */}
+
       <section className="tests">
 
         {tests.map((item, index) => (
+
           <div className="card" key={index}>
 
             <img
@@ -216,11 +219,10 @@ const Home = () => {
                 download
                 className="download-btn"
                 style={{
-                  borderColor: item.color,
                   color: item.color,
                 }}
               >
-                <Download size={15} />
+                <Download size={16} />
                 Download
               </a>
 
@@ -230,19 +232,17 @@ const Home = () => {
                 rel="noreferrer"
                 className="enquire-btn"
                 style={{
-                  borderColor: item.color,
                   color: item.color,
                 }}
               >
-                <MessageSquare size={15} />
+                <MessageSquare size={16} />
                 Enquire
               </a>
 
             </div>
 
-            <ChevronRight className="arrow" />
-
           </div>
+
         ))}
 
       </section>
