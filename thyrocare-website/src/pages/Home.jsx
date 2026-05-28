@@ -60,6 +60,21 @@ function Home() {
       image: "/images/vitamin-d.jpg",
       pdf: "/brochures/vitamin-d-profile.pdf",
     },
+    {
+      name: "Complete Vitamin",
+      image: "/images/complete-vitamin.jpg",
+      pdf: "/brochures/complete-vitamin.pdf",
+    },
+    {
+      name: "Thyroid Advance",
+      image: "/images/thyroid-advance.jpg",
+      pdf: "/brochures/thyroid-advance.pdf",
+    },
+    {
+      name: "C Pro CRM Advance",
+      image: "/images/c-pro-crm-advance.jpg",
+      pdf: "/brochures/c-pro-crm-advance.pdf",
+    },
   ];
 
   const filteredTests = tests.filter((item) =>
