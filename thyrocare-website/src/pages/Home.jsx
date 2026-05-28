@@ -68,10 +68,11 @@ function Home() {
 
   return (
     <div className="min-h-screen bg-[#f5f7fb] px-4 py-5">
-      
+
       {/* HEADER */}
 
       <div className="flex items-center justify-between">
+
         <div>
           <h1 className="text-4xl font-extrabold text-[#17398d]">
             Thyro<span className="text-red-500">care</span>
@@ -83,6 +84,7 @@ function Home() {
         </div>
 
         <div className="flex gap-3">
+
           <a
             href="tel:9819013891"
             className="w-12 h-12 bg-white rounded-full shadow flex items-center justify-center text-xl"
@@ -96,7 +98,9 @@ function Home() {
           >
             💬
           </a>
+
         </div>
+
       </div>
 
       {/* HERO */}
@@ -116,6 +120,8 @@ function Home() {
         <p className="mt-4 text-white/90 text-sm leading-7">
           Home Collection • Accurate Reports • Fast Service
         </p>
+
+        {/* BUTTONS */}
 
         <div className="flex gap-3 mt-7 flex-wrap">
 
@@ -140,13 +146,24 @@ function Home() {
             📝 Enquiry
           </Link>
 
+          <Link
+            to="/address"
+            className="bg-white/20 text-white px-5 py-3 rounded-2xl font-bold shadow"
+          >
+            📍 Address
+          </Link>
+
         </div>
+
       </div>
 
       {/* SEARCH */}
 
       <div className="bg-white rounded-2xl p-4 mt-5 shadow flex items-center gap-3">
-        <span className="text-lg">🔍</span>
+
+        <span className="text-lg">
+          🔍
+        </span>
 
         <input
           type="text"
@@ -155,19 +172,21 @@ function Home() {
           onChange={(e) => setSearch(e.target.value)}
           className="w-full outline-none bg-transparent"
         />
+
       </div>
 
-      {/* TESTS */}
+      {/* TEST CARDS */}
 
       <div className="mt-5 space-y-5">
 
         {filteredTests.map((item, index) => (
+
           <div
             key={index}
             className="bg-white rounded-[28px] overflow-hidden shadow-md"
           >
 
-            {/* CLICKABLE IMAGE */}
+            {/* IMAGE */}
 
             <a
               href={item.image}
@@ -177,7 +196,7 @@ function Home() {
               <img
                 src={item.image}
                 alt={item.name}
-                className="w-full h-auto object-cover hover:scale-[1.02] transition-all duration-300"
+                className="w-full h-[240px] object-cover hover:scale-[1.02] transition-all duration-300"
               />
             </a>
 
@@ -193,7 +212,7 @@ function Home() {
                 Download brochure and view complete package details.
               </p>
 
-              {/* BUTTONS */}
+              {/* ACTION BUTTONS */}
 
               <div className="flex gap-4 mt-5">
 
@@ -217,6 +236,7 @@ function Home() {
             </div>
 
           </div>
+
         ))}
 
       </div>
@@ -226,7 +246,10 @@ function Home() {
       <div className="grid grid-cols-2 gap-4 mt-8 mb-10">
 
         <div className="bg-white rounded-3xl p-5 text-center shadow">
-          <div className="text-3xl">📄</div>
+
+          <div className="text-3xl">
+            📄
+          </div>
 
           <h3 className="font-bold mt-3">
             Accurate Reports
@@ -235,10 +258,14 @@ function Home() {
           <p className="text-gray-500 text-sm mt-2">
             Reliable diagnostic reports
           </p>
+
         </div>
 
         <div className="bg-white rounded-3xl p-5 text-center shadow">
-          <div className="text-3xl">🏠</div>
+
+          <div className="text-3xl">
+            🏠
+          </div>
 
           <h3 className="font-bold mt-3">
             Home Collection
@@ -247,6 +274,7 @@ function Home() {
           <p className="text-gray-500 text-sm mt-2">
             Sample collection at doorstep
           </p>
+
         </div>
 
       </div>
