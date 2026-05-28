@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function Enquiry() {
+function Enquiry() {
   const [form, setForm] = useState({
     name: "",
     phone: "",
@@ -9,65 +9,91 @@ export default function Enquiry() {
   });
 
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
   };
 
   const sendWhatsApp = () => {
     const text =
-      `Hello Thyrocare Center\n\n` +
-      `Name: ${form.name}\n` +
-      `Phone: ${form.phone}\n` +
-      `Message: ${form.message}\n\n` +
-      `Please contact me for booking.`;
+      "Hello Thyrocare Center\n\n" +
+      "Name: " +
+      form.name +
+      "\nPhone: " +
+      form.phone +
+      "\nMessage: " +
+      form.message;
 
     const url =
-      "https://wa.me/919819013891?text=" + encodeURIComponent(text);
+      "https://wa.me/919819013891?text=" +
+      encodeURIComponent(text);
 
     window.open(url, "_blank");
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-6">
-      <div className="bg-white p-6 rounded shadow w-full max-w-md">
-        <h2 className="text-2xl font-bold mb-4 text-center">
+    <div className="min-h-screen bg-[#f5f7fb] flex items-center justify-center px-4">
+
+      <div className="bg-white p-6 rounded-3xl shadow-lg w-full max-w-md">
+
+        <h1 className="text-3xl font-bold text-center text-[#17398d]">
           Enquiry Form
-        </h2>
+        </h1>
 
-        <input
-          name="name"
-          placeholder="Your Name"
-          value={form.name}
-          onChange={handleChange}
-          className="w-full border p-2 mb-3"
-        />
+        <p className="text-center text-gray-500 mt-2 text-sm">
+          Contact us for bookings and reports
+        </p>
 
-        <input
-          name="phone"
-          placeholder="Phone Number"
-          value={form.phone}
-          onChange={handleChange}
-          className="w-full border p-2 mb-3"
-        />
+        <div className="mt-6 space-y-4">
 
-        <textarea
-          name="message"
-          placeholder="Message"
-          value={form.message}
-          onChange={handleChange}
-          className="w-full border p-2 mb-3"
-        />
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            value={form.name}
+            onChange={handleChange}
+            className="w-full border rounded-2xl px-4 py-3 outline-none"
+          />
 
-        <button
-          onClick={sendWhatsApp}
-          className="w-full bg-green-500 text-white py-2 rounded"
-        >
-          Send via WhatsApp
-        </button>
+          <input
+            type="text"
+            name="phone"
+            placeholder="Phone Number"
+            value={form.phone}
+            onChange={handleChange}
+            className="w-full border rounded-2xl px-4 py-3 outline-none"
+          />
 
-        <Link to="/" className="block text-center mt-4 text-blue-600">
-          Back to Home
-        </Link>
+          <textarea
+            name="message"
+            placeholder="Message"
+            rows="4"
+            value={form.message}
+            onChange={handleChange}
+            className="w-full border rounded-2xl px-4 py-3 outline-none"
+          />
+
+          <button
+            onClick={sendWhatsApp}
+            className="w-full bg-green-500 text-white py-3 rounded-2xl font-bold"
+          >
+            Send via WhatsApp
+          </button>
+
+          <Link
+            to="/"
+            className="block text-center text-blue-600 font-medium"
+          >
+            ← Back to Home
+          </Link>
+
+        </div>
+
       </div>
+
     </div>
   );
 }
+
+export default Enquiry;
