@@ -75,6 +75,96 @@ function Home() {
       image: "/images/c-pro-crm-advance.jpg",
       pdf: "/brochures/c-pro-crm-advance.pdf",
     },
+    {
+  name: "ADULT HEMOGLOBIN ELECTROPHORESIS",
+  image: "/images/ADULT-HEMOGLOBIN-ELECTROPHORESIS.jpg",
+  pdf: "/brochures/ADULT-HEMOGLOBIN-ELECTROPHORESIS.pdf",
+},
+{
+  name: "ANTI CCP ACCP",
+  image: "/images/ANTI-CCP-ACCP.jpg",
+  pdf: "/brochures/ANTI-CCP-ACCP.pdf",
+},
+{
+  name: "BHCG",
+  image: "/images/bhcg.jpg",
+  pdf: "/brochures/bhcg.pdf",
+},
+{
+  name: "CA 15.3",
+  image: "/images/CA-15.3.jpg",
+  pdf: "/brochures/CA-15.3.pdf",
+},
+{
+  name: "CA 19.9",
+  image: "/images/CA-19.9.jpg",
+  pdf: "/brochures/CA-19.9.pdf",
+},
+{
+  name: "CA 125",
+  image: "/images/CA-125.jpg",
+  pdf: "/brochures/CA-125.pdf",
+},
+{
+  name: "CARCINO EMBRYONIC ANTIGEN CEA",
+  image: "/images/CARCINO-EMBRYONIC-ANTIGEN-CEA.jpg",
+  pdf: "/brochures/CARCINO-EMBRYONIC-ANTIGEN-CEA.pdf",
+},
+{
+  name: "C PEPTIDE",
+  image: "/images/C-PEPTIDE.jpg",
+  pdf: "/brochures/C-PEPTIDE.pdf",
+},
+{
+  name: "Ferritin",
+  image: "/images/ferritin.jpg",
+  pdf: "/brochures/ferritin.pdf",
+},
+{
+  name: "FOOD INTOLERANCE PROFILE",
+  image: "/images/FOOD-INTOLERANCE-PROFILE.jpg",
+  pdf: "/brochures/FOOD-INTOLERANCE-PROFILE.pdf",
+},
+{
+  name: "HLAB 27",
+  image: "/images/hlab-27.jpg",
+  pdf: "/brochures/hlab-27.pdf",
+},
+{
+  name: "HOMOCYSTEINE",
+  image: "/images/HOMOCYSTEINE.jpg",
+  pdf: "/brochures/HOMOCYSTEINE.pdf",
+},
+{
+  name: "INSULIN FASTING",
+  image: "/images/INSULIN-FASTING.jpg",
+  pdf: "/brochures/INSULIN-FASTING.pdf",
+},
+{
+  name: "INTACT PARATHYROID HORMONE PTH",
+  image: "/images/INTACT-PARATHYROID-HORMONE-PTH.jpg",
+  pdf: "/brochures/INTACT-PARATHYROID-HORMONE-PTH.pdf",
+},
+{
+  name: "NT PROBNP",
+  image: "/images/NT-PROBNP.jpg",
+  pdf: "/brochures/NT-PROBNP.pdf",
+},
+{
+  name: "QUANTIFERON TB",
+  image: "/images/QUANTIFERON-TB.jpg",
+  pdf: "/brochures/QUANTIFERON-TB.pdf",
+},
+{
+  name: "TOTAL IGE",
+  image: "/images/total-ige.jpg",
+  pdf: "/brochures/total-ige.pdf",
+},
+{
+  name: "Typhoid",
+  image: "/images/typhoid.jpg",
+  pdf: "/brochures/typhoid.pdf",
+},
   ];
 
   const filteredTests = tests.filter((item) =>
