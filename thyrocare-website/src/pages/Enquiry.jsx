@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { MessageSquare, User, Phone, FileText, ArrowLeft, Heart } from "lucide-react";
+import { MessageSquare, User, Phone, FileText, ArrowLeft } from "lucide-react";
 
 function Enquiry() {
   const [form, setForm] = useState({
@@ -39,13 +39,18 @@ function Enquiry() {
         
         {/* Brand Header */}
         <div className="flex flex-col items-center text-center mb-8">
-          <div className="w-12 h-12 rounded-2xl bg-brand-emerald flex items-center justify-center shadow-lg shadow-brand-emerald/10 mb-4">
-            <Heart className="w-6.5 h-6.5 text-white fill-white animate-pulse" />
+          <img
+            src="images/logo.jpg"
+            alt="Thyrocare Mulund West"
+            className="h-14 w-auto rounded-xl object-contain shadow-md mb-3"
+          />
+          <div className="inline-flex items-center space-x-1.5 bg-emerald-50 border border-emerald-100 px-3 py-1 rounded-full">
+            <span className="w-1.5 h-1.5 rounded-full bg-brand-emerald animate-pulse"></span>
+            <p className="text-[9px] font-black text-brand-emerald uppercase tracking-widest">
+              Mulund West Branch
+            </p>
           </div>
-          <h1 className="font-heading font-black text-2xl text-brand-charcoal tracking-tight">
-            Thyrocare Mulund West
-          </h1>
-          <p className="text-[10px] font-extrabold text-brand-emerald uppercase tracking-widest mt-1">
+          <p className="text-xs font-bold text-gray-500 mt-2.5">
             General Booking &amp; Support Enquiry
           </p>
         </div>

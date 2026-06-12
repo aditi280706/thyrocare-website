@@ -380,96 +380,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* HOME SAMPLE COLLECTION TIMELINE */}
-        <section className="py-20 bg-white border-y border-gray-100 no-print">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center mb-16">
-              <span className="bg-emerald-50 border border-emerald-250 text-brand-emerald text-xs font-black uppercase tracking-wider px-3.5 py-1.5 rounded-full inline-block shadow-sm">
-                How it works
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-heading font-black text-brand-charcoal tracking-tight mt-3 mb-2">
-                We Come To You
-              </h2>
-              <p className="text-gray-550 text-xs sm:text-sm leading-relaxed max-w-md mx-auto font-medium">
-                Our seamless, hygienic home sample collection timeline ensures your diagnostic journey is safe and stress-free.
-              </p>
-            </div>
-
-            {/* Timeline Steps Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 relative">
-              {[
-                { step: "1", title: "Book Appointment", desc: "Select test/package and fill details online or WhatsApp." },
-                { step: "2", title: "Schedule Confirmation", desc: "Our coordinator contacts you to confirm the time slot." },
-                { step: "3", title: "Home Visit", desc: "Certified, fully-equipped phlebotomist visits your doorstep." },
-                { step: "4", title: "Sample Collection", desc: "Hygienic blood draw or sample receipt following lab guidelines." },
-                { step: "5", title: "Laboratory Processing", desc: "Safe sample transfer and processing in NABL accredited labs." },
-                { step: "6", title: "Digital Report Delivery", desc: "Get secure PDF reports on your WhatsApp/Email in 24 hours." }
-              ].map((item, idx) => (
-                <div key={idx} className="bg-gray-50 border border-gray-150 p-5 rounded-3xl flex flex-col justify-between group hover:border-brand-emerald/40 hover:-translate-y-1 transition-all duration-300 relative">
-                  <div>
-                    <span className="w-8 h-8 rounded-lg bg-brand-emerald/10 text-brand-emerald flex items-center justify-center font-heading font-black text-sm mb-4">
-                      {item.step}
-                    </span>
-                    <h4 className="font-heading font-bold text-sm text-brand-charcoal mb-2 leading-snug">
-                      {item.title}
-                    </h4>
-                    <p className="text-[11px] text-gray-500 font-semibold leading-relaxed">
-                      {item.desc}
-                    </p>
-                  </div>
-                  {idx < 5 && (
-                    <div className="hidden lg:block absolute top-1/2 -right-3.5 -translate-y-1/2 z-10 text-gray-300">
-                      <ChevronRight className="w-5 h-5" />
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* WHY CHOOSE THYROCARE */}
-        <section id="about" className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center mb-16">
-              <span className="bg-amber-50 border border-amber-250 text-brand-gold text-xs font-black uppercase tracking-wider px-3.5 py-1.5 rounded-full inline-block shadow-sm">
-                Quality Assurance
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-heading font-black text-brand-charcoal tracking-tight mt-3 mb-2">
-                Why Choose Thyrocare Mulund West
-              </h2>
-              <p className="text-gray-550 text-xs sm:text-sm leading-relaxed max-w-md mx-auto font-medium">
-                We combine industry-leading diagnostic technology with custom home collection protocols to deliver premium healthcare.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-              {[
-                { icon: ShieldCheck, title: "NABL Accredited Testing", desc: "100% reliable test results verified by certified pathologists." },
-                { icon: MapPin, title: "Home Sample Collection", desc: "Hygienic draws by trained technicians right at your doorstep." },
-                { icon: Award, title: "Trusted Diagnostic Brand", desc: "Thyrocare is a pioneer in wellness checkups and clinical assays." },
-                { icon: Clock, title: "Digital Reports", desc: "PDF reports delivered safely to your WhatsApp/Email in 24 hours." },
-                { icon: Sparkles, title: "Affordable Packages", desc: "Access comprehensive checkup panels with up to 40% discount." },
-                { icon: Heart, title: "Expert Phlebotomists", desc: "Safe draws, pediatric collections, and cold-chain transport." },
-                { icon: CheckSquare, title: "Advanced Technology", desc: "Fully automated tracks, advanced diagnostic software systems." },
-                { icon: Briefcase, title: "Nationwide Network", desc: "Centralized processing, absolute QA metrics, and NABL standards." },
-              ].map((item, idx) => (
-                <div key={idx} className="bg-gray-55 border border-gray-150 p-6 rounded-3xl hover:shadow-lg hover:border-brand-emerald/30 transition-all duration-300">
-                  <div className="w-10 h-10 rounded-xl bg-brand-emerald/10 text-brand-emerald flex items-center justify-center mb-4">
-                    <item.icon className="w-5 h-5" />
-                  </div>
-                  <h4 className="font-heading font-black text-sm text-brand-charcoal mb-2">
-                    {item.title}
-                  </h4>
-                  <p className="text-[11px] text-gray-500 font-semibold leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* TRUST & STATISTICS COUNTERS */}
         <section className="py-16 bg-brand-charcoal text-white no-print">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -816,13 +726,16 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 border-b border-gray-800 text-center md:text-left">
             
-            {/* Column 1 - Brand Info */}
             <div className="space-y-4">
-              <div className="flex items-center justify-center md:justify-start space-x-2.5">
-                <div className="w-8 h-8 rounded-lg bg-brand-emerald flex items-center justify-center">
-                  <Heart className="w-4.5 h-4.5 text-white fill-white" />
+              <div className="flex items-center justify-center md:justify-start space-x-3">
+                <img
+                  src="images/logo.jpg"
+                  alt="Thyrocare Logo"
+                  className="h-10 w-auto rounded-lg object-contain border border-gray-800"
+                />
+                <div className="border-l border-gray-700 pl-2">
+                  <span className="text-[10px] font-bold text-brand-gold uppercase tracking-widest block">Mulund West</span>
                 </div>
-                <span className="font-heading font-black text-lg text-white">Thyrocare</span>
               </div>
               <p className="text-xs text-gray-400 font-semibold leading-relaxed">
                 Authorized Thyrocare collection center serving Mulund West and Mumbai with NABL accredited pathology tests and free home draws.

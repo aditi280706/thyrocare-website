@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Phone, MessageSquare, FileText, Menu, X, Heart } from "lucide-react";
+import { Phone, MessageSquare, FileText, Menu, X } from "lucide-react";
 
 export default function Navbar({ onOpenBrochure, onScrollTo }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +21,6 @@ export default function Navbar({ onOpenBrochure, onScrollTo }) {
     { name: "Home", href: "#home" },
     { name: "Packages", href: "#packages" },
     { name: "Directory", href: "#directory" },
-    { name: "About", href: "#about" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -43,17 +42,19 @@ export default function Navbar({ onOpenBrochure, onScrollTo }) {
           {/* Logo & Brand Name */}
           <div
             onClick={() => handleNavClick("#home")}
-            className="flex items-center space-x-2.5 cursor-pointer group"
+            className="flex items-center space-x-2 cursor-pointer group"
           >
-            <div className="w-10 h-10 rounded-xl bg-brand-emerald flex items-center justify-center shadow-lg shadow-brand-emerald/15">
-              <Heart className="w-5.5 h-5.5 text-white fill-white animate-pulse" />
-            </div>
-            <div>
-              <h1 className="font-heading font-black text-lg sm:text-xl text-brand-charcoal tracking-tight group-hover:text-brand-emerald transition-colors leading-none">
-                Thyrocare
-              </h1>
-              <p className="text-[10px] font-bold text-brand-emerald uppercase tracking-widest mt-1">
-                Mulund West
+            <img
+              src="images/logo.jpg"
+              alt="Thyrocare Mulund West Logo"
+              className="h-10 sm:h-12 w-auto rounded-lg object-contain shadow-sm"
+            />
+            <div className="border-l border-gray-300 pl-2 ml-1">
+              <p className="text-[9px] font-black text-brand-emerald uppercase tracking-widest">
+                Mulund
+              </p>
+              <p className="text-[9px] font-black text-brand-charcoal uppercase tracking-widest leading-none mt-0.5">
+                West
               </p>
             </div>
           </div>
@@ -120,12 +121,16 @@ export default function Navbar({ onOpenBrochure, onScrollTo }) {
           {/* Drawer Header */}
           <div className="flex items-center justify-between pb-6 border-b border-gray-100 mb-6">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 rounded-lg bg-brand-emerald flex items-center justify-center">
-                <Heart className="w-4.5 h-4.5 text-white fill-white" />
+              <img
+                src="images/logo.jpg"
+                alt="Thyrocare Logo"
+                className="h-8 w-auto rounded-md object-contain"
+              />
+              <div className="border-l border-gray-300 pl-2">
+                <p className="text-[9px] font-black text-brand-emerald uppercase tracking-wider leading-none">
+                  Mulund West
+                </p>
               </div>
-              <h2 className="font-heading font-black text-base text-brand-charcoal leading-none">
-                Thyrocare <span className="block text-[9px] text-brand-emerald font-bold tracking-widest mt-0.5 uppercase">Mulund West</span>
-              </h2>
             </div>
             <button
               onClick={() => setIsOpen(false)}
