@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { MessageSquare, User, Phone, FileText, ArrowLeft, Heart } from "lucide-react";
 
 function Enquiry() {
   const [form, setForm] = useState({
@@ -16,82 +17,112 @@ function Enquiry() {
   };
 
   const sendWhatsApp = () => {
+    if (!form.name || !form.phone || !form.message) {
+      alert("Please fill out all fields.");
+      return;
+    }
+
     const text =
-      "Hello Thyrocare Center\n\n" +
-      "Name: " +
-      form.name +
-      "\nPhone: " +
-      form.phone +
-      "\nMessage: " +
-      form.message;
+      `*THYROCARE MULUND WEST - GENERAL ENQUIRY*\n\n` +
+      `*Patient Name:* ${form.name}\n` +
+      `*Mobile Number:* ${form.phone}\n` +
+      `*Query/Message:* ${form.message}\n\n` +
+      `_Please get in touch with me. Thank you!_`;
 
-    const url =
-      "https://wa.me/919819013891?text=" +
-      encodeURIComponent(text);
-
+    const url = `https://wa.me/919819013891?text=${encodeURIComponent(text)}`;
     window.open(url, "_blank");
   };
 
   return (
-    <div className="min-h-screen bg-[#f5f7fb] flex items-center justify-center px-4">
+    <div className="min-h-screen bg-brand-bg flex items-center justify-center px-4 py-8 no-print">
+      <div className="bg-white p-8 sm:p-10 rounded-[36px] shadow-xl border border-gray-150/70 w-full max-w-md relative overflow-hidden animate-fade-in-up">
+        
+        {/* Brand Header */}
+        <div className="flex flex-col items-center text-center mb-8">
+          <div className="w-12 h-12 rounded-2xl bg-brand-emerald flex items-center justify-center shadow-lg shadow-brand-emerald/10 mb-4">
+            <Heart className="w-6.5 h-6.5 text-white fill-white animate-pulse" />
+          </div>
+          <h1 className="font-heading font-black text-2xl text-brand-charcoal tracking-tight">
+            Thyrocare Mulund West
+          </h1>
+          <p className="text-[10px] font-extrabold text-brand-emerald uppercase tracking-widest mt-1">
+            General Booking &amp; Support Enquiry
+          </p>
+        </div>
 
-      <div className="bg-white p-6 rounded-3xl shadow-lg w-full max-w-md">
+        {/* Form Fields */}
+        <div className="space-y-4">
+          {/* Name */}
+          <div>
+            <label className="block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1.5 flex items-center">
+              <User className="w-3.5 h-3.5 mr-1 text-brand-emerald" />
+              Your Full Name
+            </label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter your name"
+              value={form.name}
+              onChange={handleChange}
+              className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl text-xs font-semibold focus:outline-none focus:ring-4 focus:ring-emerald-100/30 text-brand-charcoal"
+            />
+          </div>
 
-        <h1 className="text-3xl font-bold text-center text-[#17398d]">
-          Enquiry Form
-        </h1>
+          {/* Phone */}
+          <div>
+            <label className="block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1.5 flex items-center">
+              <Phone className="w-3.5 h-3.5 mr-1 text-brand-emerald" />
+              Phone Number
+            </label>
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Enter mobile number"
+              value={form.phone}
+              onChange={handleChange}
+              className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl text-xs font-semibold focus:outline-none focus:ring-4 focus:ring-emerald-100/30 text-brand-charcoal"
+            />
+          </div>
 
-        <p className="text-center text-gray-500 mt-2 text-sm">
-          Contact us for bookings and reports
-        </p>
+          {/* Message */}
+          <div>
+            <label className="block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1.5 flex items-center">
+              <FileText className="w-3.5 h-3.5 mr-1 text-brand-emerald" />
+              Your Query / Message
+            </label>
+            <textarea
+              name="message"
+              placeholder="Describe what tests or profiles you would like to book..."
+              rows="4"
+              value={form.message}
+              onChange={handleChange}
+              className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl text-xs font-semibold focus:outline-none focus:ring-4 focus:ring-emerald-100/30 text-brand-charcoal"
+            />
+          </div>
 
-        <div className="mt-6 space-y-4">
-
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            value={form.name}
-            onChange={handleChange}
-            className="w-full border rounded-2xl px-4 py-3 outline-none"
-          />
-
-          <input
-            type="text"
-            name="phone"
-            placeholder="Phone Number"
-            value={form.phone}
-            onChange={handleChange}
-            className="w-full border rounded-2xl px-4 py-3 outline-none"
-          />
-
-          <textarea
-            name="message"
-            placeholder="Message"
-            rows="4"
-            value={form.message}
-            onChange={handleChange}
-            className="w-full border rounded-2xl px-4 py-3 outline-none"
-          />
-
+          {/* Action Submit */}
           <button
             onClick={sendWhatsApp}
-            className="w-full bg-green-500 text-white py-3 rounded-2xl font-bold"
+            className="w-full py-4 bg-emerald-500 hover:bg-emerald-600 text-white rounded-2xl font-extrabold text-xs tracking-wider uppercase transition-all shadow-lg shadow-emerald-500/20 flex items-center justify-center space-x-2 cursor-pointer active:scale-[0.99] mt-6"
           >
-            Send via WhatsApp
+            <MessageSquare className="w-4.5 h-4.5" />
+            <span>Send Enquiry to WhatsApp</span>
           </button>
 
-          <Link
-            to="/"
-            className="block text-center text-blue-600 font-medium"
-          >
-            ← Back to Home
-          </Link>
+          {/* Back button */}
+          <div className="pt-4 text-center">
+            <Link
+              to="/"
+              className="inline-flex items-center space-x-1 text-xs font-bold text-gray-400 hover:text-brand-emerald transition-colors"
+            >
+              <ArrowLeft className="w-3.5 h-3.5" />
+              <span>Back to home</span>
+            </Link>
+          </div>
 
         </div>
 
       </div>
-
     </div>
   );
 }
